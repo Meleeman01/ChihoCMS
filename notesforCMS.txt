@@ -1,0 +1,17 @@
+todo: admin panel;
+
+base features------------------------->
+
+1. manage static pages
+    CRUD- use text editor.
+
+2. manage comic pages.
+    CRUD- create 'books->chapters->pages'.
+
+3. menu items
+    CRUD Links and links belong to pages. 
+4. "themes"
+
+5.USERS.
+
+

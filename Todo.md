@@ -40,6 +40,7 @@ USER_GROUPS:
         -is-displayed
     Pages
         id
+        -user_id
         -book_id
         -chapter_id
         -images_comic_id
