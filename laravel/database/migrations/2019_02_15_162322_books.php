@@ -15,11 +15,11 @@ class Books extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('title');
-            $table->char('description');
+            $table->string('title');
+            $table->string('description');
             $table->unsignedSmallInteger('sort_order');
-            $table->char('update_frequency');
-            $table->boolean('is-complete');
+            $table->string('update_frequency');
+            $table->boolean('is_complete');
             $table->timestamps();
             $table->softDeletes();
         });

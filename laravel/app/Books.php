@@ -11,4 +11,5 @@ class Books extends Model
     public function chapters(){
     	return $this->hasMany('\App\Models\Chapters');
     }
+    
 }

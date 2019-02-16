@@ -17,8 +17,8 @@ class Chapters extends Migration
             $table->increments('id');
             $table->integer('book_id')->unsigned();
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
-            $table->char('title');
-            $table->char('description');
+            $table->string('title');
+            $table->string('description');
             $table->unsignedMediumInteger('sort_order');
             $table->softDeletes();
             $table->timestamps();

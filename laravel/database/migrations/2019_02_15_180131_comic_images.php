@@ -13,13 +13,10 @@ class ComicImages extends Migration
      */
     public function up()
     {
-        Schema::create('comicImages', function (Blueprint $table) {
-            
+        Schema::create('comic_images', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('page_id')->unsigned();
-            $table->foreign('page_id')->references('id')->on('pages')->onDelete('cascade');
             $table->string('url');
-            $table->char('description');
+            $table->string('description');
         });
     }
 
@@ -30,6 +27,6 @@ class ComicImages extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comicImages');
+        Schema::dropIfExists('comic_images');
     }
 }

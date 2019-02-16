@@ -22,8 +22,10 @@ class Pages extends Migration
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->integer('chapter_id')->unsigned();
             $table->foreign('chapter_id')->references('id')->on('chapters')->onDelete('cascade');
-            $table->char('title');
-            $table->char('author_post_title');
+            $table->integer('comic_image_id')->unsigned();
+            $table->foreign('comic_image_id')->references('id')->on('comic_images')->onDelete('cascade');
+            $table->string('title');
+            $table->string('author_post_title');
             $table->string('author_post');
             $table->string('transcript');
             $table->unsignedInteger('sort_order');
