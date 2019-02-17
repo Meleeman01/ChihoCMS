@@ -8,9 +8,10 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }} {{ app()->version() }}</title>
+        <title>{{ config('app.name', 'ChioCMS') }}</title>
 
         <!-- Styles -->
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
@@ -18,13 +19,16 @@
             <nav class="navbar has-shadow">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a href="{{ url('/') }}" class="navbar-item">{{ config('app.name', 'Laravel') }}</a>
+                        <p class="navbar-item">{{ config('app.name', 'Chiho-CMS') }}&nbsp;0.0.1</p>
 
                         <div class="navbar-burger burger" data-target="navMenu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            
                         </div>
+                        <a class="navbar-item is-hoverable" href="/">view site<span><i style="margin-left: .5em" class="far fa-eye"></i></span></a>
+                        <a class="navbar-item is-hoverable" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout
+                                             <span><i style="margin-left: .5em;" class="fas fa-sign-out-alt"></i></span>
+                                        </a>
                     </div>
 
                     <div class="navbar-menu" id="navMenu">
@@ -37,13 +41,14 @@
                                 <a class="navbar-item " href="{{ route('register') }}">Register</a>
                                 @endif
                             @else
-                                <div class="navbar-item has-dropdown is-hoverable">
-                                    <a class="navbar-link" href="#">{{ Auth::user()->name }}</a>
+                                <div class="navbar-item">
+                                    <a class="navbar-item is-hoverable" href="/">view site<span><i style="margin-left: .5em" class="far fa-eye"></i></span></a>
+                                    <a class="navbar-link is-hidden" href="#">{{ Auth::user()->name }}</a>
 
-                                    <div class="navbar-dropdown">
-                                        <a class="navbar-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                            Logout
+                                    <div class="">
+                                        <a class="navbar-item is-hoverable" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout
+                                             <span><i style="margin-left: .5em;" class="fas fa-sign-out-alt"></i></span>
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
