@@ -21306,3 +21306,68 @@ input[type=range].slider.is-danger .has-output-tooltip + output {
   }
 }
 
+/* HSL */
+
+.adminpanel-main {
+  background-color: #bdd5ea;
+}
+
+.admin-appbar {
+  background-color: #4a5968;
+  color: white;
+}
+
+.admin-appbar a {
+  color: white;
+  padding-left: 2em;
+}
+
+.admin-appbar a span {
+  padding-left: 0.5rem;
+}
+
+.bookbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25em 0.75em;
+}
+
+.ui-section {
+  background-color: #4a5968;
+  color: whitesmoke;
+  padding-left: 1em;
+  border-top: #fef6e1 dotted 1px;
+}
+
+html {
+  background-color: whitesmoke;
+}
+
+.chiho-red {
+  color: #ce5a40;
+}
+
+.periwinkle {
+  color: #bdd5ea;
+}
+
+.cream {
+  color: #fef6e1;
+}
+
+.purple-slate {
+  color: #7a6866;
+}
+
+.navy-slate {
+  color: #4a5968;
+}
+
+@media (min-width: 700px) {
+  .hidden-mobile {
+    visibility: none;
+    display: none;
+  }
+}
+

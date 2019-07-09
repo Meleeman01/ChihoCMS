@@ -5,4 +5,74 @@
 // Variables
 @import "bulma";
 
+$customBreakPoint:700px;
+
+//UI color pallete
+
+/* HSL */
+$navy-slate: hsla(210%, 17%, 35%, 1);
+$periwinkle: hsla(208%, 52%, 83%, 1);
+$purple-slate: hsla(6%, 9%, 44%, 1);
+$cream: hsla(43%, 94%, 94%, 1);
+$chiho-red: hsla(11%, 59%, 53%, 1);
+
+.adminpanel-main{
+	background-color:$periwinkle;
+	
+
+}
+
+.admin-appbar{
+	background-color:$navy-slate;
+	color: $white;
+	a{
+		color: white;
+		padding-left:2em;
+		span{
+			padding-left:.5rem;
+		}
+	}
+}
+
+.bookbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:.25em .75em;
+}
+
+.ui-section{
+	background-color:$navy-slate;
+	color: $white-ter;
+	padding-left: 1em;
+	border-top: $cream dotted 1px;
+}
+
+html{
+	background-color:$white-ter;
+}
+
+.chiho-red{
+	color: $chiho-red;
+}
+.periwinkle{
+	color: $periwinkle;
+}
+.cream{
+	color: $cream;
+}
+.purple-slate{
+	color: $purple-slate;
+}
+.navy-slate{
+	color: $navy-slate;
+}
+
+@media (min-width: $customBreakPoint) {
+    .hidden-mobile{
+		visibility: none;
+		display: none;
+	}
+}
+
 

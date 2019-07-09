@@ -20,3 +20,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/books', 'BookController@show');
+Route::get('/books/create', 'BookController@create');
+Route::post('/books/store', 'BookController@store');
+Route::patch('/books/update','BookController@edit');
+Route::delete('/books/destroy','BookController@delete');
+

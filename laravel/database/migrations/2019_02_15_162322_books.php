@@ -20,7 +20,7 @@ class Books extends Migration
             $table->string('title');
             $table->string('description');
             $table->unsignedSmallInteger('sort_order');
-            $table->string('update_frequency');
+            $table->string('update_frequency')->nullable();
             $table->boolean('is_complete');
             $table->timestamps();
             $table->softDeletes();

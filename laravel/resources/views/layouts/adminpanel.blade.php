@@ -24,8 +24,8 @@
                         <div class="navbar-burger burger" data-target="navMenu">
                             
                         </div>
-                        <a class="navbar-item is-hoverable" href="/">view site<span><i style="margin-left: .5em" class="far fa-eye"></i></span></a>
-                        <a class="navbar-item is-hoverable" href="{{ route('logout') }}"
+                        <a class="navbar-item is-hoverable is-hidden-desktop" href="/">view site<span><i style="margin-left: .5em" class="far fa-eye"></i></span></a>
+                        <a class="navbar-item is-hoverable is-hidden-desktop" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout
                                              <span><i style="margin-left: .5em;" class="fas fa-sign-out-alt"></i></span>
                                         </a>
@@ -62,9 +62,33 @@
                     </div>
                 </div>
             </nav>
-            @yield('content')
-        </div>
-
+            @if(auth::id()==1)
+            <div class="container ">
+                <div class="columns is-centered adminpanel-main is-gapless">
+                    <div class="column is-0">
+                        <nav class="panel">
+                    
+                            <p class="panel-heading">
+                                Dashboard
+                            </p>
+                            <div class="admin-appbar ">
+                                
+                                <p class="subtitle ui-section is-marginless">Comic Pages</p>
+                                <a href="#"><i class="fas fa-plus-circle periwinkle"></i><span>Add Page</span></a><br>
+                                <a href="/books"><i class="fas fa-book cream"></i><span>Book View</span></a><br>
+                                <a href="#"><i class="fas fa-archive chiho-red"></i><span>Archive settings</span></a><br>
+                                <p class="subtitle ui-section">Static pages</p>
+                                <span>coming soon!</span>
+                                <p class="subtitle ui-section">Site Settings</p>
+                                <p> coming soon!</p>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="column is-9">
+                        @yield('content')
+                    </div>
+            </div>
+            @endif
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
