@@ -1,0 +1,6 @@
+{
+    "require" : {
+        "riverside/php-express" : "*",
+        "yeriomin/redbean-single-file": "^4.3"
+    }
+}
