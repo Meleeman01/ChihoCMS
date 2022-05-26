@@ -1,23 +1,37 @@
 <?php
 define('ROOT_PATH', dirname(__DIR__) . '/');
-include './models/books.php';
 
-include __DIR__ . '/vendor/riverside/php-express/src/autoload.php';
+include 'vendor/autoload.php';
+require_once 'config.php';
+require_once 'storage/log.php';
+//include basic template engine and router
+require_once 'lib/renderTemplate.php';
+require_once 'lib/router.php';
+//include all our models and controllers
+require_once 'models/model.php';
+require_once 'controllers/controller.php';
 
-$app = new \PhpExpress\Application();
 
-$app->get('/', function ($req, $res) {
-    $res->send('<h1>Page 1</h1><a href="page-2.html">Next &raquo;</a>');
+
+//define our routes here
+route('/',function(){
+    return render('main');
 });
 
-$app->get('/login', function ($req, $res) {
-    $res->send('<h1>Page 1</h1><a href="page-2.html">Next &raquo;</a>');
+route('/login',function(){
+    //renderLogin
+    return renderLogin();
 });
 
-
-
-$app->get('page-2.html', function ($req, $res) {
-    $res->send('<h1>Page 2</h1><a href="./">&laquo; Prev</a></a>');
+route('/login/post',function(){
+    return postLogin();
 });
 
-$app->run();
+route('/test/admin',function(){
+    var_dump($_SERVER);
+    var_dump($_POST);
+    return 'multilevel route success!';
+});
+
+$action = $_SERVER['REQUEST_URI'];
+dispatch($action);
