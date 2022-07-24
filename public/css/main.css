@@ -395,3 +395,8 @@ ul {
 .is-round {
   border-radius: var(--button-roundness);
 }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

@@ -24,6 +24,7 @@ function render(string $view, array $locals=null): void
 {
     error_log('Application render() called.');
     error_log($view." view according to render");
+
     if (!empty($locals))
     {
         error_log('
@@ -38,4 +39,24 @@ function render(string $view, array $locals=null): void
     } else {
         include $layout;
     }
+}
+
+// function back(array $locals=null) {
+//     if (!empty($locals))
+//     {
+//         error_log('
+//             extracting locals');
+//         extract($locals);
+//     }
+    
+
+//     header('Location: '.$_SERVER['HTTP_REFERER']);
+// }
+
+function json(array $data) 
+{
+    header('Content-type: application/json');
+    echo json_encode($data);
+
+    exit();
 }

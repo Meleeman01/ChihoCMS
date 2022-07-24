@@ -33,7 +33,9 @@
     "laravel-mix-svelte": "^0.5.0",
     "mflx": "^1.1.8",
     "svelte": "^3.46.4",
-    "svelte-loader": "^3.1.2"
+    "svelte-loader": "^3.1.2",
+    "svelte-material-icons": "^2.0.2",
+    "svelte-spa-router": "^3.2.0"
   },
   "devDependencies": {
     "resolve-url-loader": "^5.0.0",

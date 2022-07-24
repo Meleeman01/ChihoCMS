@@ -23,8 +23,14 @@ function route($action, Closure $callback)
  */
 function dispatch($action)
 {
+    error_log($action);
+    if ($action != '/logout') {
+        regenerateSession();
+    }
+    
     global $routes;
     //trim action from server $request uri
+
     $action = trim($action, '/');
     if (!array_key_exists($action, $routes)) {
         //if the none of the defined routes are found, return 404
