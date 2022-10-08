@@ -1,16 +1,26 @@
 <script>
-    export let books;
-
-    
+    export let booksa;
+    import { onMount } from 'svelte';
+    let books = undefined;
         console.log(books);
-    
+    onMount(async () => {
+        const res = await fetch(`/admin/books`);
+        books = await res.json();
+        console.log(books);
+    });
 </script>
 
 <div>
+    <h2>Books</h2>
     {#if !books}
-    <p>no books yet!</p>
+    <h3>no books yet!</h3>
     {:else}
-    <p>books here</p>
+        <select>
+        <option selected>--choose book--</option>
+        {#each books as book}
+            <option>{book.title}</option>
+        {/each}
+        </select>
     {/if}
 </div>
 

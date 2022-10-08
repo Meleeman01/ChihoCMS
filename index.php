@@ -13,6 +13,7 @@ require_once 'lib/router.php';
 //include all our models and controllers
 require_once 'models/model.php';
 require_once 'controllers/controller.php';
+error_log(session_status());
 
 session_set_cookie_params([
             'lifetime' => 600,
@@ -22,8 +23,12 @@ session_set_cookie_params([
             'httponly' => false,
             'samesite' => 'lax'
         ]);
+//Sometimes this doesn't start so calling session start once helps.
+if (session_status() == PHP_SESSION_NONE) {
+    error_log('starting session..');
+    session_start();
+}
 
-session_start();
 //define our routes here
 route('/',function(){
     return render('main');
@@ -45,9 +50,13 @@ route('/logout',function(){
 route('/register/post',function(){
     return postRegister();
 });
-
+//admin routes here
 route('/admin',function(){
     return index();
+});
+
+route('/admin/books', function(){
+    return getBooks();
 });
 
 

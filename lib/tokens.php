@@ -6,6 +6,7 @@ function generateToken()
     try{
         $securityToken = R::load('token',1);
     }catch(PDOException $err) {
+        error_log('error occurred in generateToken');
         error_log($err);
     }
     $securityToken->hash = $hash;
@@ -17,7 +18,7 @@ function regenerateSession() {
     if (isset($_SESSION['user'])) {
         error_log($_SESSION['user']);
         $_SESSION['user'] = generateToken();
-        session_regenerate_id();
+        //session_regenerate_id();
         error_log($_SESSION['user']);
         //var_dump($_SESSION);
     }

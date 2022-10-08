@@ -13,6 +13,7 @@ function checkIfRegisteredAlready(){
         return false;
     }
     
+    error_log($user);
 
     if (!empty($user)) {
         return true;
@@ -53,6 +54,7 @@ function postLogin() {
         
         try {
             $user = R::load('user', 1);
+            error_log($user);
         }
         catch(PDOException $err){
             return json(['error'=> $err]);
@@ -64,8 +66,10 @@ function postLogin() {
         }
         else {
             $token = generateToken();
-            error_log($token);
+            error_log('usertoken here.');
+
             $_SESSION['user'] = $token;
+            error_log(json_encode($_SESSION));
             return json(['success'=>'welcome user.']);
         }
         error_log('made it here.');
@@ -100,9 +104,10 @@ function postRegister() {
         return json(['error'=>'passwowds don\'t match 0w0']);
     }
     else if ($isRegisteredAlready) {
-            return json(['error'=>'awweady wegistered. pwease wogin 0w0']);
+        return json(['error'=>'awweady wegistered. pwease wogin 0w0']);
     }
     else {
+        //TODO make a migration script, to make sure the id is 1.
             $date = new Carbon();
 
             $user = R::dispense( 'user' );

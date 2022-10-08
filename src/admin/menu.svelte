@@ -5,7 +5,7 @@
 
     let title = `Chiho CMS ${version.version}`;
 
-</script>   
+</script>
 
 <div class="menu flx(wrap) middle space-between padme">
     <div class="title is-5">

@@ -1,16 +1,39 @@
 <?php
 
-function authCheck(){
-    //var_dump(verifyToken($_SESSION['user']));
-    if (!empty($_SESSION['user'])) {
-        return render('admin/adminPanel');
+require_once 'middleware/auth.php';
+
+function index() {
+    if (authCheck()) {
+        render('admin/adminPanel');
+        die();
     }
     else {
-        header('Location:/login');
-        die();
+        authRedirect();
     }
 }
 
-function index() {
-    authCheck();
+function getBooks() {
+    error_log('made it to getbooks');
+    if (!authCheck()) {
+        authRedirect();
+    }
+    $books = R::getAll('select * from books');
+    //return json
+    error_log(json_encode($books));
+
+    return json($books);
+}
+
+function createBook() {
+    if (!authCheck()) {
+        authRedirect();
+    }
+
+    validate(['title','description']);
+    $request = getJsonRequest();
+    error_log($request['title']);
+    $sanitized = sanitize($request,['title'=>'string','description'=>'string']);
+    
+    $book = R::dispense('book');
+
 }
