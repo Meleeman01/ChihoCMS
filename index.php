@@ -59,6 +59,10 @@ route('/admin/books', function(){
     return getBooks();
 });
 
+route('/admin/pages',function(){
+    return getPages();
+});
+
 
 $action = $_SERVER['REQUEST_URI'];
 dispatch($action);

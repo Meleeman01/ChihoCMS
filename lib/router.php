@@ -30,11 +30,18 @@ function dispatch($action)
     
     global $routes;
     //trim action from server $request uri
-
     $action = trim($action, '/');
+    //check if we have queryParams and strip them.
+    if (!empty($_GET)) {
+        $action = explode('?', $action)[0];
+    }
+
     if (!array_key_exists($action, $routes)) {
         //if the none of the defined routes are found, return 404
         error_log('not in arry.');
+        error_log($action);
+
+
         echo call_user_func($routes['404']);
     }
     else {

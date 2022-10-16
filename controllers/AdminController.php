@@ -24,6 +24,26 @@ function getBooks() {
     return json($books);
 }
 
+function getChapters(){
+    error_log('made it here to chapters');
+}
+function getPages() {
+    error_log('made it to pages');
+    //error_log(json_encode($_GET));
+    //check for get requests.
+    $sanitized = sanitize($_GET,['book'=>'string','index'=>'string','page'=>'string']);
+    $book = $sanitized['book'];
+    //get the count of pages from the currently selected book.
+    //table, column, search find one term.
+    $book_id = chihoFindOne('books','title',$book);
+
+    
+
+    error_log(json_encode($book_id));
+    //R::exec('SELECT * from pages where ')
+    error_log(json_encode($sanitized));
+}
+
 function createBook() {
     if (!authCheck()) {
         authRedirect();

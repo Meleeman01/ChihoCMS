@@ -736,7 +736,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function add_css(target) {
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-250x5c", "main.svelte-250x5c.svelte-250x5c{margin:0 auto;max-width:90vw;box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2)}.banner.svelte-250x5c.svelte-250x5c{padding:1rem;min-height:15rem;background-position:0rem -16rem}.banner.svelte-250x5c h1.svelte-250x5c{font-family:monospace;color:white;text-shadow:-2px 2px 0 #000,\n        2px 2px 0 #000,\n                 2px -2px 0 #000}");
-} // (27:12) {#if showBooks}
+} // (28:12) {#if showBooks}
 
 
 function create_if_block(ctx) {
@@ -1165,14 +1165,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[2] = list[i];
+  child_ctx[6] = list[i];
   return child_ctx;
-} // (17:4) {:else}
+} // (25:4) {:else}
 
 
 function create_else_block(ctx) {
   var select;
   var option;
+  var mounted;
+  var dispose;
   var each_value =
   /*books*/
   ctx[0];
@@ -1195,6 +1197,14 @@ function create_else_block(ctx) {
       option.selected = true;
       option.__value = "--choose book--";
       option.value = option.__value;
+      if (
+      /*selectedBook*/
+      ctx[1] === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
+        return (
+          /*select_change_handler*/
+          ctx[4].call(select)
+        );
+      });
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, select, anchor);
@@ -1202,6 +1212,19 @@ function create_else_block(ctx) {
 
       for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
         each_blocks[_i2].m(select, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+      /*selectedBook*/
+      ctx[1]);
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        /*select_change_handler*/
+        ctx[4]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        /*change_handler*/
+        ctx[5])];
+        mounted = true;
       }
     },
     p: function p(ctx, dirty) {
@@ -1234,13 +1257,23 @@ function create_else_block(ctx) {
 
         each_blocks.length = each_value.length;
       }
+
+      if (dirty &
+      /*selectedBook, books*/
+      3) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+        /*selectedBook*/
+        ctx[1]);
+      }
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(select);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (15:4) {#if !books}
+} // (23:4) {#if !books}
 
 
 function create_if_block(ctx) {
@@ -1258,14 +1291,14 @@ function create_if_block(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(h3);
     }
   };
-} // (20:8) {#each books as book}
+} // (28:8) {#each books as book}
 
 
 function create_each_block(ctx) {
   var option;
   var t_value =
   /*book*/
-  ctx[2].title + "";
+  ctx[6].title + "";
   var t;
   var option_value_value;
   return {
@@ -1274,7 +1307,7 @@ function create_each_block(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*book*/
-      ctx[2].title;
+      ctx[6].title;
       option.value = option.__value;
     },
     m: function m(target, anchor) {
@@ -1286,13 +1319,13 @@ function create_each_block(ctx) {
       /*books*/
       1 && t_value !== (t_value =
       /*book*/
-      ctx[2].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+      ctx[6].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty &
       /*books*/
       1 && option_value_value !== (option_value_value =
       /*book*/
-      ctx[2].title)) {
+      ctx[6].title)) {
         option.__value = option_value_value;
         option.value = option.__value;
       }
@@ -1360,6 +1393,43 @@ function instance($$self, $$props, $$invalidate) {
   var booksa = $$props.booksa;
   var books = undefined;
   console.log(books);
+  var selectedBook;
+
+  function displayBookPages(_x) {
+    return _displayBookPages.apply(this, arguments);
+  }
+
+  function _displayBookPages() {
+    _displayBookPages = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(e) {
+      var res;
+      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return fetch("/admin/pages?book=".concat(selectedBook, "&index=1&page=1"));
+
+            case 2:
+              res = _context2.sent;
+              _context2.t0 = console;
+              _context2.next = 6;
+              return res.json();
+
+            case 6:
+              _context2.t1 = _context2.sent;
+
+              _context2.t0.log.call(_context2.t0, _context2.t1);
+
+            case 8:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _displayBookPages.apply(this, arguments);
+  }
+
   (0,svelte__WEBPACK_IMPORTED_MODULE_1__.onMount)( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
     var res;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
@@ -1388,11 +1458,21 @@ function instance($$self, $$props, $$invalidate) {
     }, _callee);
   })));
 
-  $$self.$$set = function ($$props) {
-    if ('booksa' in $$props) $$invalidate(1, booksa = $$props.booksa);
+  function select_change_handler() {
+    selectedBook = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
+    $$invalidate(1, selectedBook);
+    $$invalidate(0, books);
+  }
+
+  var change_handler = function change_handler() {
+    return displayBookPages();
   };
 
-  return [books, booksa];
+  $$self.$$set = function ($$props) {
+    if ('booksa' in $$props) $$invalidate(3, booksa = $$props.booksa);
+  };
+
+  return [books, selectedBook, displayBookPages, booksa, select_change_handler, change_handler];
 }
 
 var Books = /*#__PURE__*/function (_SvelteComponent) {
@@ -1407,7 +1487,7 @@ var Books = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      booksa: 1
+      booksa: 3
     });
     return _this;
   }

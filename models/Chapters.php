@@ -8,4 +8,6 @@
     -sort_order
     -is-displayed
 */
+    $chapters = R::dispense('chapters');
+    //R::store($chapters);
 ?>

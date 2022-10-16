@@ -19,3 +19,5 @@
     -is-paywalled
 */
 
+$pages = R::dispense('pages');
+//R::store($pages);
