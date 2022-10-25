@@ -37,8 +37,8 @@ function getPages() {
     //table, column, search find one term.
     $book_id = chihoFindOne('books','title',$book);
 
-    
-
+    $pages = chihoWhere('pages','book_id','=',$book_id->id);
+    error_log(json_encode($pages));
     error_log(json_encode($book_id));
     //R::exec('SELECT * from pages where ')
     error_log(json_encode($sanitized));

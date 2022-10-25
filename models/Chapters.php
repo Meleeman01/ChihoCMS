@@ -9,5 +9,6 @@
     -is-displayed
 */
     $chapters = R::dispense('chapters');
+    error_log($books);
     //R::store($chapters);
 ?>

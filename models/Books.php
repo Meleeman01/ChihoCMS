@@ -12,7 +12,7 @@
         -publish_frequency
     */
     $books = R::dispense('books');
-    
+
     //$books->title = 'fmlftw';
     //error_log(printf($books .'lol'));
     // R::store($books); //test
