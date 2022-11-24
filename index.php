@@ -63,6 +63,10 @@ route('/admin/pages',function(){
     return getPages();
 });
 
+route('/admin/update-pages',function(){
+    return updatePageFromBookView();
+});
+
 
 $action = $_SERVER['REQUEST_URI'];
 dispatch($action);

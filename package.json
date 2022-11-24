@@ -27,7 +27,6 @@
   "homepage": "https://github.com/Meleeman01/ChihoCMS#readme",
   "dependencies": {
     "cross-env": "^7.0.3",
-    "eslint": "^8.24.0",
     "eslint-plugin-svelte3": "^3.4.1",
     "laravel-mix": "^6.0.43",
     "laravel-mix-svelte": "^0.5.0",
@@ -38,6 +37,7 @@
     "svelte-spa-router": "^3.3.0"
   },
   "devDependencies": {
+    "eslint": "^8.27.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.55.0",
     "sass-loader": "^12.6.0"

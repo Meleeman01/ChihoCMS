@@ -1,4 +1,5 @@
 <?php
+use Carbon\Carbon;
 //redbean from config
 /*
     id
@@ -18,6 +19,7 @@
     -date_published
     -is-paywalled
 */
+$date = new Carbon();
 
 $pages = R::dispense('pages');
 
@@ -32,8 +34,8 @@ $pages->author_post = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 $pages->author_img = 'https://placekitten.com/200/200';
 $pages->transcript = 'a description of the web comic goes here. its usually good for robots looking for relevant content and search results';
 $pages->rating = '{username:5,userName2:3,usernam3:4,username34:5}'; //show ratings?
-$pages->date_created = '';
-$pages->date_modified = '';
-$pages->date_published = '';
-$pages->is_paywalled = '0'
+$pages->date_created = $date->toDateTimeString();
+$pages->date_modified = $date->toDateTimeString();
+$pages->date_published = $date->toDateTimeString();
+$pages->is_paywalled = '0';
 //R::store($pages);

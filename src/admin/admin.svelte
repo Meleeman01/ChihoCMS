@@ -23,10 +23,9 @@
     <Menu />
     <div class="flx is-12">
         <Sidebar on:getBooks={getBooks} />
-        <div >
-            mini apps here.
+        <div style="width:100%; padding:1rem;">
             {#if showBooks}
-            <Books books={books}/>
+            <Books />
             {/if}
             
         </div>
