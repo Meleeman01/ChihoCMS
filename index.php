@@ -15,19 +15,20 @@ require_once 'models/model.php';
 require_once 'controllers/controller.php';
 error_log(session_status());
 
-session_set_cookie_params([
-            'lifetime' => 600,
-            'path' => '/',
-            'domain' => $_SERVER['HTTP_HOST'],
-            'secure' => true,
-            'httponly' => false,
-            'samesite' => 'lax'
-        ]);
 //Sometimes this doesn't start so calling session start once helps.
 if (session_status() == PHP_SESSION_NONE) {
     error_log('starting session..');
     session_start();
 }
+
+session_set_cookie_params([
+    'lifetime' => 600,
+    'path' => '/',
+    'domain' => $_SERVER['HTTP_HOST'],
+    'secure' => true,
+    'httponly' => false,
+    'samesite' => 'lax'
+]);
 
 //define our routes here
 route('/',function(){
