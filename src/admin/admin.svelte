@@ -13,7 +13,7 @@
         books = undefined;
         console.log('lol getbooks ig.');
     }
-    
+
 </script>
 
 <main>
@@ -24,10 +24,10 @@
     <div class="flx is-12">
         <Sidebar on:getBooks={getBooks} />
         <div style="width:100%; padding:1rem;">
-            {#if showBooks}
+            {#if !showBooks}
             <Books />
             {/if}
-            
+
         </div>
     </div>
 </main>
@@ -36,7 +36,7 @@
     main {
         margin: 0 auto;
         max-width: 90vw;
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2);     
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2);
     }
     .banner {
         padding: 1rem;
