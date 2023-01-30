@@ -27,7 +27,6 @@
             {#if !showBooks}
             <Books />
             {/if}
-
         </div>
     </div>
 </main>
