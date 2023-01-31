@@ -1071,8 +1071,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function add_css(target) {
-  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-250x5c", "main.svelte-250x5c.svelte-250x5c{margin:0 auto;max-width:90vw;box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2)}.banner.svelte-250x5c.svelte-250x5c{padding:1rem;min-height:15rem;background-position:0rem -16rem}.banner.svelte-250x5c h1.svelte-250x5c{font-family:monospace;color:white;text-shadow:-2px 2px 0 #000,\n        2px 2px 0 #000,\n                 2px -2px 0 #000}");
-} // (27:12) {#if showBooks}
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-1sgxiqq", "main.svelte-1sgxiqq.svelte-1sgxiqq{margin:0 auto;max-width:90vw;box-shadow:0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2)}.banner.svelte-1sgxiqq.svelte-1sgxiqq{padding:1rem;min-height:15rem;background-position:0rem -16rem}.banner.svelte-1sgxiqq h1.svelte-1sgxiqq{font-family:monospace;color:white;text-shadow:-2px 2px 0 #000,\n        2px 2px 0 #000,\n                 2px -2px 0 #000}");
+} // (26:12) {#if !showBooks}
 
 
 function create_if_block(ctx) {
@@ -1118,14 +1118,14 @@ function create_fragment(ctx) {
   sidebar.$on("getBooks",
   /*getBooks*/
   ctx[1]);
-  var if_block =
+  var if_block = !
   /*showBooks*/
   ctx[0] && create_if_block(ctx);
   return {
     c: function c() {
       main = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("main");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div0.innerHTML = "<h1 class=\"svelte-250x5c\">Welcome to your webcomic backend!</h1>";
+      div0.innerHTML = "<h1 class=\"svelte-1sgxiqq\">Welcome to your webcomic backend!</h1>";
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(menu.$$.fragment);
       t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
@@ -1134,12 +1134,12 @@ function create_fragment(ctx) {
       t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       if (if_block) if_block.c();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "banner flx middle svelte-250x5c");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "banner flx middle svelte-1sgxiqq");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div0, "background-image", "url('storage/704375.png')");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div1, "width", "100%");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div1, "padding", "1rem");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "flx is-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(main, "class", "svelte-250x5c");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(main, "class", "svelte-1sgxiqq");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, main, anchor);
@@ -1158,7 +1158,7 @@ function create_fragment(ctx) {
       var _ref2 = _slicedToArray(_ref, 1),
           dirty = _ref2[0];
 
-      if (
+      if (!
       /*showBooks*/
       ctx[0]) {
         if (if_block) {
