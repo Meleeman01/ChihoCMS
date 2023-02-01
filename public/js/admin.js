@@ -1480,7 +1480,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 function add_css(target) {
-  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-19g86li", ".dropdown.svelte-19g86li.svelte-19g86li{height:2.5rem;margin-bottom:1rem}.dropdown.svelte-19g86li>option.svelte-19g86li{padding:10px;font-size:18px;height:2.5rem}.grid-container.svelte-19g86li.svelte-19g86li{display:grid;grid-template-columns:1fr 1fr 1fr;grid-auto-rows:auto;grid-row-gap:.5rem}.last-grid-item.svelte-19g86li.svelte-19g86li{grid-column-start:1;grid-column-end:4}.pagination.svelte-19g86li.svelte-19g86li{margin-left:.2rem}.pagination.svelte-19g86li.svelte-19g86li:hover{background-color:blue}input.svelte-19g86li.svelte-19g86li,input[placeholder].svelte-19g86li.svelte-19g86li{font-size:18px;text-align:center}.svelte-19g86li.svelte-19g86li{scrollbar-width:normal;scrollbar-color:hsl(203deg, 77%, 43%) #fefefe}.svelte-19g86li.svelte-19g86li::-webkit-scrollbar{width:1px}.svelte-19g86li.svelte-19g86li::-webkit-scrollbar-track{background:#fefefe}.svelte-19g86li.svelte-19g86li::-webkit-scrollbar-thumb{background-color:hsl(203deg, 77%, 43%);border-radius:20px;border:2px #fefefe solid}");
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-1mxcjag", ".dropdown.svelte-1mxcjag.svelte-1mxcjag{height:2.5rem;margin-bottom:1rem}.dropdown.svelte-1mxcjag>option.svelte-1mxcjag{padding:10px;font-size:18px;height:2.5rem}.grid-container.svelte-1mxcjag.svelte-1mxcjag{display:grid;grid-template-columns:1fr 1fr 1fr;grid-auto-rows:auto;grid-row-gap:.5rem}.last-grid-item.svelte-1mxcjag.svelte-1mxcjag{grid-column-start:1;grid-column-end:4}.pagination.svelte-1mxcjag.svelte-1mxcjag{margin-left:.2rem}.pagination.svelte-1mxcjag.svelte-1mxcjag:hover{background-color:blue}input.svelte-1mxcjag.svelte-1mxcjag,input[placeholder].svelte-1mxcjag.svelte-1mxcjag{font-size:18px;text-align:center}.svelte-1mxcjag.svelte-1mxcjag{scrollbar-width:normal;scrollbar-color:hsl(203deg, 77%, 43%) #fefefe}.svelte-1mxcjag.svelte-1mxcjag::-webkit-scrollbar{width:1px}.svelte-1mxcjag.svelte-1mxcjag::-webkit-scrollbar-track{background:#fefefe}.svelte-1mxcjag.svelte-1mxcjag::-webkit-scrollbar-thumb{background-color:hsl(203deg, 77%, 43%);border-radius:20px;border:2px #fefefe solid}");
 }
 
 function get_each_context(ctx, list, i) {
@@ -1553,8 +1553,8 @@ function create_else_block(ctx) {
       option.selected = true;
       option.__value = "--choose book--";
       option.value = option.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "is-half dropdown svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "is-half dropdown svelte-1mxcjag");
       if (
       /*selectedBook*/
       ctx[1] === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
@@ -1686,8 +1686,8 @@ function create_if_block(ctx) {
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       button.textContent = "Create?";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h3, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h3, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, h3, anchor);
@@ -1721,7 +1721,7 @@ function create_each_block_4(ctx) {
       /*book*/
       ctx[29].title;
       option.value = option.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
@@ -1844,10 +1844,10 @@ function create_if_block_1(ctx) {
       t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div2.innerHTML = "<h4 class=\"svelte-19g86li\">sort order</h4>";
+      div2.innerHTML = "<h4 class=\"svelte-1mxcjag\">sort order</h4>";
       t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div3.innerHTML = "<h4 class=\"svelte-19g86li\">title</h4>";
+      div3.innerHTML = "<h4 class=\"svelte-1mxcjag\">title</h4>";
       t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
@@ -1866,17 +1866,17 @@ function create_if_block_1(ctx) {
       option0.selected = true;
       option0.__value = "--Sort--";
       option0.value = option0.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option0, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option0, "class", "svelte-1mxcjag");
       option1.__value = "id";
       option1.value = option1.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option1, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option1, "class", "svelte-1mxcjag");
       option2.__value = "sort_order";
       option2.value = option2.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option2, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option2, "class", "svelte-1mxcjag");
       option3.__value = "title";
       option3.value = option3.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option3, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "class", "dropdown svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option3, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "class", "dropdown svelte-1mxcjag");
       if (
       /*selectedSortStrategy*/
       ctx[2] === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
@@ -1885,7 +1885,7 @@ function create_if_block_1(ctx) {
           ctx[12].call(select0)
         );
       });
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "class", "dropdown svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "class", "dropdown svelte-1mxcjag");
       if (
       /*resultsPerPage*/
       ctx[4] === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
@@ -1894,17 +1894,17 @@ function create_if_block_1(ctx) {
           ctx[14].call(select1)
         );
       });
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "flx(wrap) middle center svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "flx(wrap) middle space-between svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "flx(wrap) middle center svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "flx(wrap) middle center svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "grid-container svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "flx(wrap) middle center svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "flx(wrap) middle space-between svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "flx(wrap) middle center svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "flx(wrap) middle center svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "grid-container svelte-1mxcjag");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div6, "display", "flex");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div6, "width", "15rem");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div6, "overflow-x", "scroll");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div6, "align-self", "center");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div1, anchor);
@@ -2123,7 +2123,7 @@ function create_each_block_3(ctx) {
       /*index*/
       ctx[23] + 1;
       option.value = option.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
@@ -2148,7 +2148,7 @@ function create_else_block_3(ctx) {
     c: function c() {
       button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(contentsave.$$.fragment);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-success flx middle svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-success flx middle svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, button, anchor);
@@ -2190,7 +2190,7 @@ function create_if_block_5(ctx) {
     c: function c() {
       button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       button.textContent = "Quick Edit";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-warning flx middle svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-warning flx middle svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, button, anchor);
@@ -2232,8 +2232,8 @@ function create_else_block_2(ctx) {
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
       t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" results");
       t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "info flx(wrap) middle center last-grid-item svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "info flx(wrap) middle center last-grid-item svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
@@ -2285,8 +2285,8 @@ function create_if_block_2(ctx) {
       button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(squareeditoutline.$$.fragment);
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-success is-round flx middle svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "flx(wrap) middle center svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-success is-round flx middle svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "flx(wrap) middle center svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       if_block.m(target, anchor);
@@ -2389,15 +2389,15 @@ function create_else_block_1(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       input = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "flx(wrap) middle center svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "flx(wrap) middle center svelte-1mxcjag");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "type", "text");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "name", "pageTitle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "placeholder", input_placeholder_value =
       /*page*/
       ctx[21].title);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "flx(wrap) middle center svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "flx(wrap) middle center svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div0, anchor);
@@ -2492,10 +2492,10 @@ function create_if_block_3(ctx) {
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "flx(wrap) middle center svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "flx(wrap) middle center svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "flx(wrap) middle center svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "flx(wrap) middle center svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div0, anchor);
@@ -2543,7 +2543,7 @@ function create_if_block_4(ctx) {
       ctx[23] + 1;
       option.value = option.__value;
       option.selected = true;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
@@ -2579,7 +2579,7 @@ function create_each_block_2(ctx) {
       /*index*/
       ctx[23] + 1;
       option.value = option.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option, "class", "svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
@@ -2711,7 +2711,7 @@ function create_each_block(ctx) {
     c: function c() {
       button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-info pagination svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn(normal) is-info pagination svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, button, anchor);
@@ -2764,8 +2764,8 @@ function create_fragment(ctx) {
       h2.textContent = "Books";
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block.c();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "svelte-19g86li");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "flx(column) svelte-19g86li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "svelte-1mxcjag");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "flx(column) svelte-1mxcjag");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
@@ -2922,15 +2922,16 @@ function instance($$self, $$props, $$invalidate) {
               //have to use JSON.stringify hack in order to prevent pagesCopy from being mutated by
               //pages when we directly edit the dom.
               pagesCopy = JSON.stringify(pages);
-              _context2.next = 18;
+              _context2.next = 19;
               break;
 
             case 15:
               _context2.prev = 15;
               _context2.t2 = _context2["catch"](6);
+              s;
               console.log(_context2.t2);
 
-            case 18:
+            case 19:
               pagination = pages.find(function (p) {
                 return p.pagination;
               });
@@ -2942,7 +2943,7 @@ function instance($$self, $$props, $$invalidate) {
                 $$invalidate(7, totalResults = parseInt(pagination.pagination.results));
               }
 
-            case 20:
+            case 21:
             case "end":
               return _context2.stop();
           }

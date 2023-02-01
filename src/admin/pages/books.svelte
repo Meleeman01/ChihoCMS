@@ -39,7 +39,7 @@
             //pages when we directly edit the dom.
             pagesCopy = JSON.stringify(pages);
         }
-        catch(err){
+        catch(err){s
             console.log(err);
         }
         pagination = pages.find((p)=>p.pagination);
@@ -127,9 +127,9 @@
                     {/each}
                 </select>
             </div>
-            
+
             {#if !edit}
-            <button on:click={toggleEditSave} class="btn(normal) is-warning flx middle"> 
+            <button on:click={toggleEditSave} class="btn(normal) is-warning flx middle">
                 Quick Edit</button>
             {:else}
             <button on:click={toggleEditSave} class="btn(normal) is-success flx middle"><ContentSave/></button>
@@ -143,13 +143,13 @@
                 <h4>title</h4>
             </div>
             <div>
-                
+
             </div>
             {#each pages as page}
                 {#if !page.pagination}
                     {#if !edit}
                     <div class="flx(wrap) middle center">
-                        
+
                         <span>{page.sort_order}</span>
                     </div>
                     <div class="flx(wrap) middle center">
@@ -178,17 +178,17 @@
                         <p>out of {page.pagination.results} results</p>
                     </div>
                 {/if}
-                
+
             {/each}
 
         </div>
         <div style="display: flex; width: 15rem; overflow-x: scroll; align-self: center;">
         {#each shownPages as page, index}
             <button on:click={(e)=>displayBookPages(page+1,e,index)} class="btn(normal) is-info pagination">{page+1}</button>
-            
+
         {/each}
         </div>
-        
+
 
         {/if}
     {/if}
@@ -196,7 +196,7 @@
 
 <style>
     .dropdown {
-        height: 2.5rem; 
+        height: 2.5rem;
         margin-bottom: 1rem;
     }
     .dropdown > option {
@@ -220,13 +220,13 @@
     .pagination:hover {
         background-color: blue;
     }
-    
+
     input, input[placeholder] {
         font-size: 18px;
         text-align: center;
     }
 
-    
+
     /* Works on Firefox */
 * {
   scrollbar-width: normal;
