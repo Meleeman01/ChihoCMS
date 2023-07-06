@@ -1,0 +1,232 @@
+[
+    {
+        "name": "books",
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "foreignKey": ""
+            },
+            {
+                "name": "title",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "description",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "sort_order",
+                "type": "INTEGER",
+                "foreignKey": ""
+            },
+            {
+                "name": "date_created",
+                "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+                "foreignKey": ""
+            },
+            {
+                "name": "date_modified",
+                "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+                "foreignKey": ""
+            },
+            {
+                "name": "is_finished",
+                "type": "INTEGER",
+                "foreignKey": ""
+            },
+            {
+                "name": "publish_frequency",
+                "type": "TEXT",
+                "foreignKey": ""
+            }
+        ]
+    },
+    {
+        "name": "chapters",
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "foreignKey": ""
+            },
+            {
+                "name": "book_id",
+                "type": "INTEGER",
+                "foreignKey": "books(id)"
+            },
+            {
+                "name": "title",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "description",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "sort_order",
+                "type": "INTEGER",
+                "foreignKey": ""
+            },
+            {
+                "name": "is_displayed",
+                "type": "INTEGER",
+                "foreignKey": ""
+            }
+        ]
+    },
+    {
+        "name": "pages",
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER ",
+                "foreignKey": ""
+            },
+            {
+                "name": "user_id",
+                "type": "INTEGER",
+                "foreignKey": "users(id)"
+            },
+            {
+                "name": "book_id",
+                "type": "INTEGER",
+                "foreignKey": "books(id)"
+            },
+            {
+                "name": "chapter_id",
+                "type": "INTEGER",
+                "foreignKey": "chapters(id)"
+            },
+            {
+                "name": "images_comic_id",
+                "type": "INTEGER",
+                "foreignKey": "comicImages(id)"
+            },
+            {
+                "name": "sort_order",
+                "type": "INTEGER",
+                "foreignKey": ""
+            },
+            {
+                "name": "title",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "author_post_title",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "author_post",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "author_img",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "transcript",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "rating",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "date_created",
+                "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+                "foreignKey": ""
+            },
+            {
+                "name": "date_modified",
+                "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+                "foreignKey": ""
+            },
+            {
+                "name": "date_published",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "is_paywalled",
+                "type": "INTEGER",
+                "foreignKey": ""
+            }
+        ]
+    },
+    {
+        "name": "users",
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER PRIMARY KEY AUTOINCREMENT",
+                "foreignKey": ""
+            },
+            {
+                "name": "username",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "password",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+                "foreignKey": ""
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+                "foreignKey": ""
+            }
+        ]
+    },
+    {
+        "name": "tokens",
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER PRIMARY KEY AUTOINCREMENT",
+                "foreignKey": ""
+            },
+            {
+                "name": "hash",
+                "type": "TEXT",
+                "foreignKey": ""
+            }
+        ]
+    },
+    {
+        "name": "comicImages",
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER PRIMARY KEY AUTOINCREMENT",
+                "foreignKey": ""
+            },
+            {
+                "name": "url",
+                "type": "TEXT",
+                "foreignKey": ""
+            },
+            {
+                "name": "description",
+                "type": "TEXT",
+                "foreignKey": ""
+            }
+        ]
+    }
+]

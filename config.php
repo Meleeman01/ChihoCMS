@@ -6,7 +6,7 @@
 //     } catch(PDOException $e){
 //         echo $e->getmessage();
 //     }
-R::setup('sqlite:database/database.sqlite3');
+R::setup('sqlite:migrations/your_database.sqlite3');
 
 
 

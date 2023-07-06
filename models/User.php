@@ -7,6 +7,6 @@
     -updated_at
 */
 
- $user = R::dispense('user');
+// $user = R::dispense('user');
 
 // R::store($user); //test

@@ -53,7 +53,7 @@ function postLogin() {
     else {
         
         try {
-            $user = R::load('user', 1);
+            $user = R::load('users', 1);
             error_log($user);
         }
         catch(PDOException $err){
