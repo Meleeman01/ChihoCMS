@@ -1,0 +1,9 @@
+{
+    "require" : {
+        "riverside/php-express" : "*",
+        "yeriomin/redbean-single-file": "^4.3",
+        "laminas/laminas-authentication": "^2.10",
+        "nesbot/carbon": "^2.58",
+        "respect/validation": "^2.2"
+    }
+}
